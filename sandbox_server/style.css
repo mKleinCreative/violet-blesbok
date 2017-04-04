@@ -1,0 +1,37 @@
+body{
+  color: black;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    }
+
+.flex-item:nth-child(1) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    }
+
+
+
+.side-box {
+        width: 30px;
+        height: 10px;
+        border: 1px solid blue;
+        }
+
+.long-box{
+  margin: 10px;
+  border: 1px solid green;
+}
+
+.body-box{
+  width: 300px;
+  height: 100px;
+  border: 1px solid green;
+}
