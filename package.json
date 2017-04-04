@@ -2,7 +2,7 @@
   "name": "violet-blesbok",
   "version": "1.0.0",
   "description": "A postman clone named postalicious",
-  "main": "index.js",
+  "main": "index",
   "scripts": {
     "test": "test",
     "sb": "nodemon ./sandbox_server/server"
