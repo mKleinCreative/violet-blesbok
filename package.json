@@ -1,0 +1,24 @@
+{
+  "name": "violet-blesbok",
+  "version": "1.0.0",
+  "description": "A postman clone named postalicious",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "sb": "nodemon ./sandbox_server/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mKleinCreative/violet-blesbok.git"
+  },
+  "author": "Brittany Waldon, Michael Klein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mKleinCreative/violet-blesbok/issues"
+  },
+  "homepage": "https://github.com/mKleinCreative/violet-blesbok#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0"
+  }
+}
