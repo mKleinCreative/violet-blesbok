@@ -1,23 +1,16 @@
 body{
   color: black;
-
-}
-
-#bigbox{
-  display: flex;
-  flex-flow: row nowrap;
 }
 
 .flex-container-1{
   display: flex;
   flex-direction: column;
-  }
+}
 
 .flex-container-2 {
   display: flex;
   flex-direction: row;
-
-  }
+}
 
 .flex-container-3{
   display: flex;
@@ -69,27 +62,27 @@ align-content: flex-start;
 
   .Request{
     background: blue;
-
   }
-  .Reponse{
 
+  .Reponse{
     background-color: : green;
   }
 
-  .request-button,
-  .response-button{
-  }
   .request-container,
   .response-container{
     display: flex;
     width: 50%;
     height: 500px;
     flex-direction: column;
-
   }
 
 #req-button,
 #resp-button{
   width: 130px;
   height: 50px;
+}
+
+#bigbox{
+  display: flex;
+  flex-flow: row nowrap;
 }
