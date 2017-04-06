@@ -48,20 +48,20 @@ app.post('/things', function(request, response) {
 // a 200 (OK) status code
 // a plain-text response body with the content This is a plain text file
 // the Content-Type header set to text/plain
-
-app.get('/somefile', function(request, response) {
-  response.set('Content-Type', 'text/plain')
-  response.status(200).send('This is a plain text file.')
-})
-
 // Sending a GET request to the path /somefile with an Accept header of text/html responds with...
 // a 200 (OK) status code
 // an HTML response body with the content <!DOCTYPE html><html><body>This is an HTML file</body></html>
 // the Content-Type header set to text/html
 
-app.get('/somefile', function(request, response){
-  response.set('Content-Type', 'text/html')
-  response.status(200).send('This is an HTML file')
+
+app.get('/somefile', function(request, response) {
+  if (request.accepts('text/plain')) {
+    response.set('Content-Type', 'text/plain')
+    response.send('This is a plain text file')
+  } else {
+    response.set('Content-Type', 'text/html')
+    response.send('<!DOCTYPE html><html><body>This is an HTML file</body></html>')
+  }
 })
 
 // Sending a GET request to the path /myjsondata with an Accept header of application/json responds with...
@@ -69,23 +69,37 @@ app.get('/somefile', function(request, response){
 // an HTML response body with the content { "title": "some JSON data" }
 // the Content-Type header set to application/json
 
-app.get('myjsondata', function(request, response) {
+app.get('/myjsondata', function(request, response) {
   response.set('Content-Type', 'application/json')
-  response.status(200).send('It\'s json.')
+  response.status(200).send({ "title": "some JSON data" })
 })
 
 // Sending a GET request to the path /old-page responds with...
 // a 301 (Moved Permanently) status code
 // the Location header set to http://localhost:3000/newpage
 
-app.get('/old-page', function(request, response){
-  response.status(301)
+app.get('/old-page', function(request, response) {
+  response.set('Location', 'http://localhost:3000/newpage')
+  response.status(301).send('This resouce died a long time ago, redirecting')
+})
+app.get('/newpage', function(request, response) {
+  response.send('New page, hooray!')
 })
 
 // Sending a POST request to the path /admin-only responds with a 403 (Forbidden) status code
 
+app.post('/admin-only', function(request, response) {
+  response.status(403).send('You have entered the Forbidden Forest, it is Forbidden')
+})
 
 // Sending a GET request to the path /not-a-page responds with a 404 (Not Found) status code
 
+app.get('/not-a-page', function(request, response) {
+  response.status(404).send('things don\'t exist')
+})
 
-// Sending a GET request to the path /server-error responds with a 500 (Internal Server Error) staus code
+// Sending a GET request to the path /server-error responds with a 500 (Internal Server Error) staus code'
+
+app.get('/server-error', function(request, response) {
+  response.status(500).send('things dun broke')
+})
