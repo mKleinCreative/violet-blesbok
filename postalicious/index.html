@@ -8,30 +8,48 @@
   <body>
 
 
-  <div class="flex-container-1">
-    <div class="flex-item">
-      <label for="basic-url">Method</label>
-      <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-    </div>
-    <div class="flex-item">
-      <label for="basid-url">Host</label>
-      <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+<div id="bigbox">
+    <div class="flex-container-1">
+      <div class="flex-item">
+        <label for="basic-url">Method</label>
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+      </div>
+      <div class="flex-item">
+        <label for="basid-url">Host</label>
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+      </div>
     </div>
   </div>
 
+<label for="basic-url">Query Parameter</label>
 
-  <div class="flex-container-2">
-    <div class="flex-item-1">
-      <label for="basic-url">Query Parameter</label>
-        <div class="Query-Keys-Container">
-          <input placeholder="Key" type="text" class="Query-Keys" id="Query_Key1" aria-describedby="basic-addon3">
-        </div>
-        <div class="flex-item">
-          <input placeholder="Key" type="text" class="Query-Keys" id="Query_Key2" aria-describedby="basic-addon3">
-        </div>
-        <div class="flex-item">
-          <input placeholder="Key" type="text" class="Query-Keys" id="Query_Key3" aria-describedby="basic-addon3">
-        </div>
+    <div class="flex-container-2">
+
+      <div class="Query-Keys-Container">
+
+          <div class="flex-item">
+            <input placeholder="Key" type="text" class="Query-Keys" id="Query_Key1" aria-describedby="basic-addon3">
+          </div>
+          <div class="flex-item">
+            <input placeholder="Key" type="text" class="Query-Keys" id="Query_Key2" aria-describedby="basic-addon3">
+          </div>
+          <div class="flex-item">
+            <input placeholder="Key" type="text" class="Query-Keys" id="Query_Key3" aria-describedby="basic-addon3">
+          </div>
+
+      </div>
+
+      <div class="Query-Value-Container">
+          <div class="flex-item">
+            <input placeholder="Value" type="text" class="Query-Value" id="Query_Value1" aria-describedby="basic-addon3">
+          </div>
+          <div class="flex-item">
+            <input placeholder="Value" type="text" class="Query-Value" id="Query_Value2" aria-describedby="basic-addon3">
+          </div>
+          <div class="flex-item">
+            <input placeholder="Value" type="text" class="Query-Value" id="Query_Value3" aria-describedby="basic-addon3">
+          </div>
+      </div>
     </div>
     <div class="Query-Value-Container">
         <div class="flex-item">
@@ -47,53 +65,78 @@
   </div>
 
 
+<label for="basic-url">Headers</label>
+    <div class="flex-container-3">
 
-  <div class="flex-container-3">
-    <label for="basic-url">Headers</label>
-      <div class="flex-item">
-        <input placeholder="Key" type="text" class="Header-Keys" id="Header_Key1" aria-describedby="basic-addon3">
-      </div>
-      <div class="flex-item">
-        <input placeholder="Key" type="text" class="Header-Keys" id="Header_Key2" aria-describedby="basic-addon3">
-      </div>
-      <div class="flex-item">
-        <input placeholder="Key" type="text" class="Header-Keys" id="Header_Key3" aria-describedby="basic-addon3">
+      <div class="Header-Key-Container">
+
+        <div class="flex-item">
+          <input placeholder="Key" type="text" class="Header-Keys" id="Header_Key1" aria-describedby="basic-addon3">
+        </div>
+        <div class="flex-item">
+          <input placeholder="Key" type="text" class="Header-Keys" id="Header_Key2" aria-describedby="basic-addon3">
+        </div>
+        <div class="flex-item">
+          <input placeholder="Key" type="text" class="Header-Keys" id="Header_Key3" aria-describedby="basic-addon3">
+        </div>
+
       </div>
 
-      <div class="flex-item">
-        <input placeholder="Value" type="text" class="Header-Values" id="Header_Value1" aria-describedby="basic-addon3">
-      </div>
-      <div class="flex-item">
-        <input placeholder="Value" type="text" class="Header-Values" id="Header_Value2" aria-describedby="basic-addon3">
+
+        <div class="header-value-container">
+
+          <div class="flex-item">
+            <input placeholder="Value" type="text" class="Header-Values" id="Header_Value1" aria-describedby="basic-addon3">
+          </div>
+          <div class="flex-item">
+            <input placeholder="Value" type="text" class="Header-Values" id="Header_Value2" aria-describedby="basic-addon3">
+          </div>
+          <div class="flex-item">
+            <input placeholder="Value" type="text" class="Header-Values" id="Header_Value3" aria-describedby="basic-addon3">
+          </div>
+
+        </div>
+
+    </div>
+
+
+    <label for="basic-url">Body</label>
+      <div class="flex-container-4">
+        <div class="body-box">
+
+        </div>
       </div>
       <div class="flex-item">
         <input placeholder="Value" type="text" class="Header-Values" id="Header_Value3" aria-describedby="basic-addon3">
       </div>
   </div>
+</div>
 
+      <div class="flex-container-5">
+        <div class="request-button">
+          <button id="req-button" type="button" class="btn btn-default">Build Request</button>
+        </div>
 
-  <div class="flex-container-4">
-    <label for="basic-url">Body</label>
-    <div class="body-box">
-      <input type"text" class="Body-Container" aria-describedby="basic-addon3">
+        <div class="response-button">
+          <button id="resp-button" type="button" class="btn btn-default">Build and Send</button>
+        </div>
+      </div>
+
+    <div class="Information-From-Server">
+      <div class="request-container">
+      <div class="Request">
+        Request
+      </div>
+      <div class="blank-box">
+      </div>
+    </div>
+    <div class="response-container">
+      <div class="Response">
+        Response
+      </div>
+      <div class="blank-box-2">
+      </div>
     </div>
   </div>
-
-
-  <div class="flex-container-5">
-    <button type="button" class="btn btn-default">Build Request</button>
-    <button type="button" class-"btn btn-default">Build and Send</button>
-  </div>
-
-  <div class="Information-From-Server">
-    <div class="Request">
-      Request
-    </div>
-
-    <div class="Response">
-      Response
-    </div>
-  </div>
-
   </body>
 </html>

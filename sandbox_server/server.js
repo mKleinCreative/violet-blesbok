@@ -53,6 +53,7 @@ app.post('/things', function(request, response) {
 // an HTML response body with the content <!DOCTYPE html><html><body>This is an HTML file</body></html>
 // the Content-Type header set to text/html
 
+
 app.get('/somefile', function(request, response) {
   if (request.accepts('text/plain')) {
     response.set('Content-Type', 'text/plain')
