@@ -49,23 +49,38 @@ app.post('/things', function(request, response) {
 // a plain-text response body with the content This is a plain text file
 // the Content-Type header set to text/plain
 
+app.get('/somefile', function(request, response) {
+  response.set('Content-Type', 'text/plain')
+  response.status(200).send('This is a plain text file.')
+})
 
 // Sending a GET request to the path /somefile with an Accept header of text/html responds with...
 // a 200 (OK) status code
 // an HTML response body with the content <!DOCTYPE html><html><body>This is an HTML file</body></html>
 // the Content-Type header set to text/html
 
+app.get('/somefile', function(request, response){
+  response.set('Content-Type', 'text/html')
+  response.status(200).send('This is an HTML file')
+})
 
 // Sending a GET request to the path /myjsondata with an Accept header of application/json responds with...
 // a 200 (OK) status code
 // an HTML response body with the content { "title": "some JSON data" }
 // the Content-Type header set to application/json
 
+app.get('myjsondata', function(request, response) {
+  response.set('Content-Type', 'application/json')
+  response.status(200).send('It\'s json.')
+})
 
 // Sending a GET request to the path /old-page responds with...
 // a 301 (Moved Permanently) status code
 // the Location header set to http://localhost:3000/newpage
 
+app.get('/old-page', function(request, response){
+  response.status(301)
+})
 
 // Sending a POST request to the path /admin-only responds with a 403 (Forbidden) status code
 
