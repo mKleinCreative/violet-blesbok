@@ -5,6 +5,7 @@ body{
 .flex-container-1{
   display: flex;
   flex-direction: column;
+  background-color: papayawhip;
 }
 
 .flex-container-2 {
@@ -23,11 +24,13 @@ flex-flow: row nowrap;
 justify-content: flex-start;
 align-content: flex-start;
 }
-.flex-container-5 {
+
+.flex-container-5{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: flex-end;
+  padding: 20px;
 }
 
 .Query-Keys-Container,
@@ -60,21 +63,21 @@ align-content: flex-start;
   flex-direction: row;
   }
 
-  .Request{
-    background: blue;
-  }
+.Request{
+  background: blue;
+}
 
-  .Reponse{
-    background-color: : green;
-  }
+.Reponse{
+  background-color: green;
+}
 
-  .request-container,
-  .response-container{
-    display: flex;
-    width: 50%;
-    height: 500px;
-    flex-direction: column;
-  }
+.request-container,
+.response-container{
+  display: flex;
+  width: 50%;
+  height: 500px;
+  flex-direction: column;
+}
 
 #req-button,
 #resp-button{

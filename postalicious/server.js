@@ -1,11 +1,22 @@
 const express = require('express')
+const server = express()
+const http = require('http').createServer(server)
+const path = require('path')
+const logger = require('morgan')
+const bodyParser = require('body-parser')
 
-const app = express()
+const port = process.env.PORT || 3001
+const index = require('./form_routes.js')
 
-const path = require("path");
+server.use(bodyParser.json({ type: 'application/json' }))
+server.use(bodyParser.urlencoded({extended: true}))
+server.use(express.static(path.join(__dirname, 'public')))
+server.use('/', index)
 
-app.get('/', function(request, response) {
-  response.sendFile(path.join(__dirname+'/index.html'));
-})
+server.use(logger("combined"))
 
-app.listen('3001')
+server.set(port)
+
+server.listen(port)
+
+module.exports = server

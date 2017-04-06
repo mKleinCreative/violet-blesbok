@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Postalicious Sandbox</title>
-    <link rel="stylesheet" type ="text/css" href="style.css"</link>
+    <link rel="stylesheet" type ="text/css" href="./stylesheets/style.css">
   </head>
   <body>
 
@@ -51,25 +51,10 @@
           </div>
       </div>
     </div>
-    <div class="Query-Value-Container">
-        <div class="flex-item">
-          <input placeholder="Value" type="text" class="Query-Value" id="Query_Value1" aria-describedby="basic-addon3">
-        </div>
-        <div class="flex-item">
-          <input placeholder="Value" type="text" class="Query-Value" id="Query_Value2" aria-describedby="basic-addon3">
-        </div>
-        <div class="flex-item">
-          <input placeholder="Value" type="text" class="Query-Value" id="Query_Value3" aria-describedby="basic-addon3">
-        </div>
-    </div>
-  </div>
-
 
 <label for="basic-url">Headers</label>
     <div class="flex-container-3">
-
       <div class="Header-Key-Container">
-
         <div class="flex-item">
           <input placeholder="Key" type="text" class="Header-Keys" id="Header_Key1" aria-describedby="basic-addon3">
         </div>
@@ -79,12 +64,8 @@
         <div class="flex-item">
           <input placeholder="Key" type="text" class="Header-Keys" id="Header_Key3" aria-describedby="basic-addon3">
         </div>
-
       </div>
-
-
         <div class="header-value-container">
-
           <div class="flex-item">
             <input placeholder="Value" type="text" class="Header-Values" id="Header_Value1" aria-describedby="basic-addon3">
           </div>
@@ -94,23 +75,16 @@
           <div class="flex-item">
             <input placeholder="Value" type="text" class="Header-Values" id="Header_Value3" aria-describedby="basic-addon3">
           </div>
-
         </div>
-
     </div>
 
 
     <label for="basic-url">Body</label>
       <div class="flex-container-4">
         <div class="body-box">
-
+          <input class="body-box" name="request-body"/>
         </div>
       </div>
-      <div class="flex-item">
-        <input placeholder="Value" type="text" class="Header-Values" id="Header_Value3" aria-describedby="basic-addon3">
-      </div>
-  </div>
-</div>
 
       <div class="flex-container-5">
         <div class="request-button">
@@ -127,14 +101,14 @@
       <div class="Request">
         Request
       </div>
-      <div class="blank-box">
+      <div class="request-box">
       </div>
     </div>
     <div class="response-container">
       <div class="Response">
         Response
       </div>
-      <div class="blank-box-2">
+      <div class="response-box">
       </div>
     </div>
   </div>

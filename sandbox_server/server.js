@@ -9,8 +9,6 @@ app.get('/', function(request, response) {
   response.status(200).send('Welcome to Sandbox!')
 })
 
-
-
 // Sending a GET request to the path /search?q=doodads responds with...
 // a 200 (OK) status code
 // a plain-text response body with the content You searched for: "doodads"
