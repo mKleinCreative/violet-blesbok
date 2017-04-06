@@ -69,7 +69,7 @@ app.get('/somefile', function(request, response){
 // an HTML response body with the content { "title": "some JSON data" }
 // the Content-Type header set to application/json
 
-app.get('myjsondata', function(request, response) {
+app.get('/myjsondata', function(request, response) {
   response.set('Content-Type', 'application/json')
   response.status(200).send('It\'s json.')
 })
