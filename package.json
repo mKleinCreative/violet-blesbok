@@ -5,7 +5,8 @@
   "main": "index",
   "scripts": {
     "test": "test",
-    "sb": "nodemon ./sandbox_server/server"
+    "sb": "nodemon ./sandbox_server/server",
+    "pl": "nodemon ./postalicious/server"
   },
   "repository": {
     "type": "git",
