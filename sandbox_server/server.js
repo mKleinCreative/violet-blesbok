@@ -52,7 +52,7 @@ app.post('/things', function(request, response) {
 // the Content-Type header set to text/html
 
 
-app.get('/somefile', function(request, response) {
+app.post('/somefile', function(request, response) {
   if (request.accepts('text/plain')) {
     response.set('Content-Type', 'text/plain')
     response.send('This is a plain text file')

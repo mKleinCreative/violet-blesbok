@@ -5,7 +5,6 @@ body{
 .flex-container-1{
   display: flex;
   flex-direction: column;
-  background-color: papayawhip;
 }
 
 .flex-container-2 {
@@ -67,7 +66,7 @@ align-content: flex-start;
   background: blue;
 }
 
-.Reponse{
+.Response{
   background-color: green;
 }
 
