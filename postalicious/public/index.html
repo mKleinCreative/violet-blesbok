@@ -28,26 +28,26 @@
       <div class="Query-Keys-Container">
 
           <div class="flex-item">
-            <input placeholder="Key" type="text" class="Query-Keys" id="Query_Key1" aria-describedby="basic-addon3">
+            <input placeholder="Key" name="Query_Key1" type="text" class="Query-Keys" id="Query_Key1">
           </div>
           <div class="flex-item">
-            <input placeholder="Key" type="text" class="Query-Keys" id="Query_Key2" aria-describedby="basic-addon3">
+            <input placeholder="Key" name="Query_Key2" type="text" class="Query-Keys" id="Query_Key2">
           </div>
           <div class="flex-item">
-            <input placeholder="Key" type="text" class="Query-Keys" id="Query_Key3" aria-describedby="basic-addon3">
+            <input placeholder="Key" name="Query_Key3" type="text" class="Query-Keys" id="Query_Key3">
           </div>
 
       </div>
 
     <div class="Query-Value-Container">
         <div class="flex-item">
-          <input placeholder="Value" type="text" class="Query-Value" id="Query_Value1" aria-describedby="basic-addon3">
+          <input placeholder="Value" name="Query_Value1" type="text" class="Query-Value" id="Query_Value1">
         </div>
         <div class="flex-item">
-          <input placeholder="Value" type="text" class="Query-Value" id="Query_Value2" aria-describedby="basic-addon3">
+          <input placeholder="Value" name="Query_Value2" type="text" class="Query-Value" id="Query_Value2">
         </div>
         <div class="flex-item">
-          <input placeholder="Value" type="text" class="Query-Value" id="Query_Value3" aria-describedby="basic-addon3">
+          <input placeholder="Value" name="Query_Value3" type="text" class="Query-Value" id="Query_Value3">
         </div>
     </div>
   </div>
@@ -91,7 +91,7 @@
         </div>
 
         <div class="response-button">
-          <button id="resp-button" type="submit" onclick="fetchRequest()" class="btn btn-default">Build and Send</button>
+          <button id="resp-button" type="submit" onclick="fetchRequest" class="btn btn-default">Build and Send</button>
         </div>
       </div>
     <!-- </form> -->
@@ -112,6 +112,8 @@
       </div>
     </div>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="methods.js"></script>
+
   </body>
 </html>

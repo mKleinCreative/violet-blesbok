@@ -77,7 +77,12 @@ align-content: flex-start;
   height: 500px;
   flex-direction: column;
   background-color: papayawhip;
-  border: 1.5px solid black
+  border: 1.5px solid black;
+  overflow: scroll;
+}
+
+* {
+  background: rgba(162, 183, 204, 0.2);
 }
 
 #req-button,
