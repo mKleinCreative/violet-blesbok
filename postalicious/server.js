@@ -5,7 +5,6 @@ const path = require('path')
 const logger = require('morgan')
 const bodyParser = require('body-parser')
 const requestPromise = require('request-promise')
-const sandBoxUrl = 'http://localhost:3000'
 
 const port = process.env.PORT || 3001
 const index = require('./form_routes.js')
@@ -16,14 +15,17 @@ server.use(express.static(path.join(__dirname, 'public')))
 server.use('/', index)
 
 server.post('/construct_request', function(request, response) {
+  console.log(request.body);
+
   const options = {
-    method: 'POST',
-    uri: `${sandBoxUrl}/somefile`,
-    body: JSON.stringify(request.body)
+    method: `${request.body.method}`,
+    uri: `${request.body.host}`,
+    body: JSON.stringify(request.body.request),
   }
 
   requestPromise(options)
     .then(function(results) {
+      console.log('response:', response)
       response.json(results)
     })
 })

@@ -63,11 +63,11 @@ align-content: flex-start;
   }
 
 .Request{
-  background: blue;
+  background: mediumaquamarine;
 }
 
 .Response{
-  background-color: green;
+  background-color: forestgreen;
 }
 
 .request-container,
@@ -76,6 +76,8 @@ align-content: flex-start;
   width: 50%;
   height: 500px;
   flex-direction: column;
+  background-color: papayawhip;
+  border: 1.5px solid black
 }
 
 #req-button,

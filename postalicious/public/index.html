@@ -7,16 +7,16 @@
   </head>
   <body>
 
-<form method='POST' action="/construct_request" id="main-form">
+<!-- <form method='POST' action="/construct_request" id="main-form"> -->
   <div id="bigbox">
     <div class="flex-container-1">
       <div class="flex-item">
         <label for="basic-url">Method</label>
-        <input type="text" class="form-control" name="method" id="basic-url" aria-describedby="basic-addon3">
+        <input type="text" class="form-control" name="method" id="urlMethod">
       </div>
       <div class="flex-item">
-        <label for="basid-url">Host</label>
-        <input type="text" class="form-control" name="host" id="basic-url" aria-describedby="basic-addon3">
+        <label for="basic-url">Host</label>
+        <input type="text" class="form-control" name="host" id="basic-url">
       </div>
     </div>
   </div>
@@ -91,26 +91,27 @@
         </div>
 
         <div class="response-button">
-          <button id="resp-button" type="submit" class="btn btn-default">Build and Send</button>
+          <button id="resp-button" type="submit" onclick="fetchRequest()" class="btn btn-default">Build and Send</button>
         </div>
       </div>
-    </form>
+    <!-- </form> -->
 
     <div class="Information-From-Server">
       <div class="request-container">
       <div class="Request">
         Request
       </div>
-      <div class="request-box">
+      <div Name="request-box" class="request-box">
       </div>
     </div>
     <div class="response-container">
       <div class="Response">
         Response
       </div>
-      <div class="response-box">
+      <div Name="response-box" class="response-box">
       </div>
     </div>
   </div>
+  <script src="methods.js"></script>
   </body>
 </html>
